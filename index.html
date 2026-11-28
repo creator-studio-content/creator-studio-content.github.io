@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Orca</title>
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href="https://creator-studio-content.github.io/en/" />
+    <link rel="alternate" hreflang="en" href="https://creator-studio-content.github.io/en/" />
+    <link rel="alternate" hreflang="ar" href="https://creator-studio-content.github.io/ar/" />
+    <script>
+      // No middleware in a static export: choose the locale in the browser.
+      (function () {
+        var langs = navigator.languages || [navigator.language || 'en'];
+        var ar = langs.some(function (l) {
+          return /^ar\b/i.test(l);
+        });
+        location.replace(ar ? '/ar/' : '/en/');
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=/en/" /></noscript>
+  </head>
+  <body
+    style="font-family: system-ui, sans-serif; background: #fff5ec; color: #102a43; padding: 24px"
+  >
+    <p>
+      <a href="/en/">Continue in English</a> ·
+      <a href="/ar/" lang="ar" dir="rtl">المتابعة بالعربية</a>
+    </p>
+  </body>
+</html>
